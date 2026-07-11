@@ -1,0 +1,9 @@
+project: uint256
+target: fuzzBinary
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzBinary/testsuite
+cmds:
+  - cmd: /mayhem/fuzzBinary
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzzBinary.dict

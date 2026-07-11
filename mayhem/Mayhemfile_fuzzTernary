@@ -1,0 +1,9 @@
+project: uint256
+target: fuzzTernary
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzTernary/testsuite
+cmds:
+  - cmd: /mayhem/fuzzTernary
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzzTernary.dict
